@@ -17,7 +17,7 @@ docker pull hello-world
 ```
 
 ```
-docker pull hello-world
+docker pull hello-seattle
 ```
 
 * Crear un contener usando la imagen `hello-world`
@@ -53,8 +53,8 @@ Tip: Pueden usar los primeros tres caracteres del id del para referirse a ella y
 ```
 docker run -it --rm -d -p 8080:80 --name web nginx
 ```
-**-d**: se utiliza por el comando Docker Run para arrancar en segundo plano, también conocido como background.
-**–rm**: para destruir el docker al terminar su ejecución.
-**-p**: cumple la función de mapear puertos del host hacia el contenedor.
-**-it**: interactivo (stdin) + tty (pseudo terminal).
-**--name**: se utilizar para brindarle un nombre el contenedor, si no se indica docker le asignara uno autogenerado por defecto.**
+* **-d**: se utiliza por el comando Docker Run para arrancar en segundo plano, también conocido como background.
+* **–rm**: para destruir el docker al terminar su ejecución.
+* **-p**: cumple la función de mapear puertos del host hacia el contenedor.
+* **-it**: interactivo (stdin) + tty (pseudo terminal).
+* **--name**: se utilizar para brindarle un nombre el contenedor, si no se indica docker le asignara uno autogenerado por defecto.**
