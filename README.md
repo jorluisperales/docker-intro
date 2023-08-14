@@ -1,12 +1,12 @@
 
-# Comandos basicos de Docker
+# Comandos básicos de Docker
 
-* Ver la version instalada de docker:
+* Ver la versión instalada de docker:
 ```
 docker --version
 ```
 
-* Listar las imagenes almacenadas localmente
+* Listar las imágenes almacenadas localmente
 ```
 docker images ls
 ```
@@ -24,13 +24,13 @@ docker pull hello-world
 ```
 docker pull hello-seattle
 ```
-**Tip**: Las imagenes tambien pueden ser descargadas especificando el tag `<Docker Hub Id o Registro de docker>/<Repositorio de Docker>:<Nombre/Tag o version>`, ejemplo: `jperales29/static-site:latest`
+**Tip**: Las imágenes también pueden ser descargadas especificando el tag `<Docker Hub Id o Registro de docker>/<Repositorio de Docker>:<Nombre/Tag o versión>`, ejemplo: `jperales29/static-site:latest`
 
 * Crear un contener usando la imagen `hello-world`
 ```
 docker run hello-world
 ```
-**Tip**: Si la imagen no esta disponible localmente, docker intentara descargalo desde el registro
+**Tip**: Si la imagen no está disponible localmente, docker intentara descargalo desde el registro
 
 * Listar todos los contenedores
 ```
@@ -75,7 +75,7 @@ docker container run -it -d -p 8080:80 --name web nginx
 * **-it**: interactivo (stdin) + tty (pseudo terminal).
 * **--name**: se utilizar para brindarle un nombre el contenedor, si no se indica docker le asignara uno autogenerado por defecto.**
 
-**Tip**: Se puede agregar la opcion `-rm` para hacer que el contenedor sea eliminado una vez complete su ejecucion o sea detenido
+**Tip**: Se puede agregar la opción `-rm` para hacer que el contenedor sea eliminado una vez complete su ejecución o sea detenido
 
 * Detener el contenedor 
 ```
@@ -97,21 +97,18 @@ docker container restart 95e985a58fbf
 docker container inspect 95e985a58fbf
 ```
 
-* Ver las estadisticas  del contenedor
+* Ver las estadísticas del contenedor
 ```
 docker container stats 95e985a58fbf
 ```
-**Tip**: Este comando puede ser ejecutado sin identificar el contenedor para poder ver las estadisticas de todos los contenedores siendo ejecutados.
+**Tip**: Este comando puede ser ejecutado sin identificar el contenedor para poder ver las estadísticas de todos los contenedores siendo ejecutados.
 
 * Ver los logs del contenedor
 ```
 docker container logs 95e985a58fbf
 ```
 
-
-
-
-
-Recursos:
-
-https://github.com/manjunath5496/Basic-Docker-Commands
+* Conectarnos al contenedor
+```
+docker container exec -it web bash
+```
