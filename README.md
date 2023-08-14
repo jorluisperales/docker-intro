@@ -24,20 +24,30 @@ docker pull hello-world
 ```
 docker pull hello-seattle
 ```
+**Tip**: Las imagenes tambien pueden ser descargadas especificando el tag `<Docker Hub Id o Registro de docker>/<Repositorio de Docker>:<Nombre/Tag o version>`, ejemplo: `jperales29/static-site:latest`
 
 * Crear un contener usando la imagen `hello-world`
 ```
 docker run hello-world
 ```
+**Tip**: Si la imagen no esta disponible localmente, docker intentara descargalo desde el registro
 
 * Listar todos los contenedores
 ```
 docker container ls -a
 ```
 
+```
+docker ps -a
+```
+
 * Listar todos los contenedores y su tamaño
 ```
 docker container ls -a -s
+```
+
+```
+docker ps -a -s
 ```
 
 * Remover una imagen de docker usando su ID en este caso `515d5e66f68a`
